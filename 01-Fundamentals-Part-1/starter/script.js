@@ -24,14 +24,41 @@
 
 // console.log(typeof null); //returns as object but really is undefined
 
-let age = 30;
-age = 31;
+// let age = 30;
+// age = 31;
 
-const birthYear = 2000;
+// const birthYear = 2000;
 // birthYear = 1990; cannot reassign
 
 // const job; missing initializor error 
 
-//never use var
-var job = 'programmer';
-job = 'student';
+// never use var
+// var job = 'programmer';
+// job = 'student';
+
+//Math operators
+const now = 2037;
+const ageTanzil = now - 2000;
+const ageSarah = now - 2018;
+console.log(ageTanzil, ageSarah);
+
+console.log(ageTanzil * 2, ageTanzil / 2, 2**3);
+
+const firstName = 'Tanzil';
+const lastName = 'Hassan';
+console.log(firstName + ' ' + lastName);
+
+//assignment operators
+let x = 10 + 5; //15
+x += 10;  //x = x + 10 = 25
+x *= 4; //100
+x++; //101
+x--; //100
+x--; //99
+console.log(x);
+
+//comparison operators
+console.log(ageTanzil > ageSarah);
+console.log(ageSarah >= 18);
+
+console.log(now - 1991 > now - 2019);
