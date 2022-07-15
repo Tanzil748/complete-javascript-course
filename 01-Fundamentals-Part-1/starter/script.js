@@ -89,7 +89,7 @@ console.log(markBMI, johnBMI);
 let markHigherBMI = true;
 if (markBMI > johnBMI) console.log(markHigherBMI);
 // ----------------------------------------------------
-*/
+
 const firstName = 'Tanzil';
 const job = 'student';
 const birthYear = 2000;
@@ -104,3 +104,24 @@ console.log(tanzilNew);
 console.log(`Multi
 line
 try`);
+*/
+
+const age = 15;
+const isOldEnough = age >= 18;
+
+if(isOldEnough) {
+    console.log(`Sarah can start driving 🚕`);
+} else {
+    const yearsLeft = 18- age;
+    console.log(`Sarah is not old enough. Wait another ${yearsLeft} years.`);
+}
+
+const birthYear = 1991;
+let century;
+if(birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
