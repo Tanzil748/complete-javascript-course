@@ -62,7 +62,6 @@ console.log(ageTanzil > ageSarah);
 console.log(ageSarah >= 18);
 
 console.log(now - 1991 > now - 2019);
-*/
 
 const now = 2037;
 const ageTanzil = now - 2000;
@@ -76,3 +75,18 @@ console.log(x,y);
 
 const averageAge = (ageTanzil + ageSarah) / 2;
 console.log(ageTanzil,ageSarah, averageAge);
+*/
+// -------------------------------------------------
+//Coding Challenge #1s
+let markMassOne = 78;
+let markHeightOne = 1.69;
+let johnMassOne = 92;
+let johnHeightOne = 1.95;
+
+let markBMI = markMassOne / (markHeightOne ** 2);
+let johnBMI = johnMassOne / (johnHeightOne ** 2);
+console.log(markBMI, johnBMI);
+
+let markHigherBMI = true;
+if (markBMI > johnBMI) console.log(markHigherBMI);
+// ----------------------------------------------------
