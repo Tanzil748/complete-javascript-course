@@ -104,7 +104,7 @@ console.log(tanzilNew);
 console.log(`Multi
 line
 try`);
-*/
+
 
 const age = 15;
 const isOldEnough = age >= 18;
@@ -125,3 +125,23 @@ if(birthYear <= 2000) {
 }
 
 console.log(century);
+*/
+
+//---------------------------------------------------------------------------
+//Coding Challenge 2
+let markMassOne = 78;
+let markHeightOne = 1.69;
+let johnMassOne = 92;
+let johnHeightOne = 1.95;
+
+let markBMI = markMassOne / (markHeightOne ** 2);
+let johnBMI = johnMassOne / (johnHeightOne ** 2);
+console.log(markBMI, johnBMI);
+
+let markHigherBMI = markBMI > johnBMI;
+if (markHigherBMI) {
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}`);
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
+}
+//-----------------------------------------------------------------------------
