@@ -35,7 +35,7 @@
 // never use var
 // var job = 'programmer';
 // job = 'student';
-
+/*
 //Math operators
 const now = 2037;
 const ageTanzil = now - 2000;
@@ -62,3 +62,17 @@ console.log(ageTanzil > ageSarah);
 console.log(ageSarah >= 18);
 
 console.log(now - 1991 > now - 2019);
+*/
+
+const now = 2037;
+const ageTanzil = now - 2000;
+const ageSarah = now - 2018;
+
+console.log(now - 1991 > now - 2019);
+
+let x, y;
+x = y = 25-10-5;
+console.log(x,y);
+
+const averageAge = (ageTanzil + ageSarah) / 2;
+console.log(ageTanzil,ageSarah, averageAge);
