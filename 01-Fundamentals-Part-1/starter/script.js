@@ -144,7 +144,6 @@ if (markHigherBMI) {
     console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
 }
 //-----------------------------------------------------------------------------
-*/
 
 //type conversion
 const inputYear = '1991';
@@ -159,3 +158,19 @@ console.log(String(23),23);
 //type coercion
 console.log('I am ' + 23 + ' years old')
 console.log('23' - '10' - 3)  //minus triggers conversion to number
+*/
+
+// const age = 18;
+// if(age === 18) console.log(`You just became an adult`)
+
+const favorite = Number(prompt('Whats your favorite number?'));
+// console.log(favorite);
+// console.log(typeof favorite);
+
+if(favorite === 23) {
+    console.log(`23 is a cool number`);
+} else if(favorite ===27) {
+    console.log(`27 is best number`);
+} else {
+    console.log(`number is neither 23 or 27`);
+}
