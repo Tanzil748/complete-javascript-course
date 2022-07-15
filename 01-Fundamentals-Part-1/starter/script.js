@@ -125,7 +125,6 @@ if(birthYear <= 2000) {
 }
 
 console.log(century);
-*/
 
 //---------------------------------------------------------------------------
 //Coding Challenge 2
@@ -145,3 +144,18 @@ if (markHigherBMI) {
     console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
 }
 //-----------------------------------------------------------------------------
+*/
+
+//type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear); //first parameter is number, second is string
+console.log(inputYear + 18);
+
+console.log(Number('Tanzil')); //returns NaN
+console.log(typeof NaN); //returns as number - its invalid number
+
+console.log(String(23),23);
+
+//type coercion
+console.log('I am ' + 23 + ' years old')
+console.log('23' - '10' - 3)  //minus triggers conversion to number
