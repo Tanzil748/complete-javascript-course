@@ -23,3 +23,15 @@
 // console.log(typeof year);
 
 // console.log(typeof null); //returns as object but really is undefined
+
+let age = 30;
+age = 31;
+
+const birthYear = 2000;
+// birthYear = 1990; cannot reassign
+
+// const job; missing initializor error 
+
+//never use var
+var job = 'programmer';
+job = 'student';
