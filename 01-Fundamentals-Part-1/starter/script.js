@@ -75,7 +75,6 @@ console.log(x,y);
 
 const averageAge = (ageTanzil + ageSarah) / 2;
 console.log(ageTanzil,ageSarah, averageAge);
-*/
 // -------------------------------------------------
 //Coding Challenge #1s
 let markMassOne = 78;
@@ -90,3 +89,18 @@ console.log(markBMI, johnBMI);
 let markHigherBMI = true;
 if (markBMI > johnBMI) console.log(markHigherBMI);
 // ----------------------------------------------------
+*/
+const firstName = 'Tanzil';
+const job = 'student';
+const birthYear = 2000;
+const year = 2037;
+
+const tanzil = "I'm " + firstName + ', a ' +  (year - birthYear) + " year old " + job;
+console.log(tanzil);
+
+const tanzilNew = `I'm ${firstName} ,a ${year-birthYear} year old ${job}`;
+console.log(tanzilNew);
+
+console.log(`Multi
+line
+try`);
