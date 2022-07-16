@@ -173,7 +173,7 @@ if(favorite === 23) {
 } else {
     console.log(`number is neither 23 or 27`);
 }
-*/
+
 const hasDriverLicense = true;
 const hasGoodVision = true;
 
@@ -194,4 +194,20 @@ if (hasDriverLicense && hasGoodVision && !isTired) {
     console.log(`Sarah is able to drive!`);
 } else {
     console.log(`Someone else should drive`);
+}
+*/
+//Coding challenge 3
+let dolphinsAverage = (96+109+89)/3;
+let koalasAverage = (88+91+110)/3;
+
+console.log(dolphinsAverage, koalasAverage);
+
+if(dolphinsAverage > koalasAverage && dolphinsAverage >=100) {
+    console.log(`Dolphin's win!`)
+} else if (koalasAverage > dolphinsAverage && koalasAverage >=100) {
+    console.log(`Koalas win!`)
+} else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100) {
+    console.log('Its a draw!')
+} else {
+    console.log('Teams have not scored enough for trophy')
 }
