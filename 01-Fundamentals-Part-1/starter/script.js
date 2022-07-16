@@ -158,7 +158,6 @@ console.log(String(23),23);
 //type coercion
 console.log('I am ' + 23 + ' years old')
 console.log('23' - '10' - 3)  //minus triggers conversion to number
-*/
 
 // const age = 18;
 // if(age === 18) console.log(`You just became an adult`)
@@ -173,4 +172,26 @@ if(favorite === 23) {
     console.log(`27 is best number`);
 } else {
     console.log(`number is neither 23 or 27`);
+}
+*/
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+// console.log(!hasDriverLicense);
+
+// if (hasDriverLicense && hasGoodVision) {
+//     console.log(`Sarah is able to drive!`);
+// } else {
+//     console.log(`Someone else should drive`);
+// }
+
+const isTired = false;
+// console.log(hasDriverLicense || hasGoodVision || isTired);
+
+if (hasDriverLicense && hasGoodVision && !isTired) {
+    console.log(`Sarah is able to drive!`);
+} else {
+    console.log(`Someone else should drive`);
 }
