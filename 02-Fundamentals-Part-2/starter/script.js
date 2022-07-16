@@ -10,7 +10,6 @@ if(hasDriverLicense) console.log('I can drive');
 // const interface = 'Audio';
 // const private = 534;
 // const if = 1;
-*/
 
 function logger() {
     console.log('My name is Tanzil');
@@ -31,3 +30,21 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2,4);
 console.log(appleOrangeJuice);
+*/
+
+//function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1999); //need to assign to variable to capture result
+console.log(age1);
+
+//function expression
+const calcAge2 = function (birthYear) {
+    return 2037-birthYear;
+}
+
+const age2 = calcAge2(1995);
+
+console.log(age1, age2);
