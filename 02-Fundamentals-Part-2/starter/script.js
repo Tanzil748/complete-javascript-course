@@ -321,7 +321,7 @@ if(mark.bmi > john.bmi) {
 for(let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}🏋🏽‍♂️`)
 }
-*/
+
 const jonasArray = [
     'Jonas', 
     'Smith',
@@ -364,4 +364,24 @@ for(let i = 0; i < jonasArray.length; i++) {
     if(typeof jonasArray[i] === 'number') break; //after first number type is found, loop is broken 
 
     console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+const jonasArray = [
+    'Jonas', 
+    'Smith',
+    2037-1991,
+    'teacher',
+    ['Mike', 'Jamal', 'Peter']
+];
+
+for(let i = jonasArray.length - 1; i>=0; i--) {
+    console.log(jonasArray[i]);
+}
+
+for(let exer = 1; exer < 4; exer++) {
+    console.log(`------STARTING EXERCISE ${exer}`);
+    for(let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exer}: Lifting weight repetition ${rep} 🏋🏽‍♂️`)
+    }
 }
