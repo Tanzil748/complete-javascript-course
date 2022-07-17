@@ -317,7 +317,51 @@ if(mark.bmi > john.bmi) {
     console.log(`${john.firstName}'s BMI (${john.bmi} is higher than ${mark.firstName}'s (${mark.bmi}))`)
 }
 -----------------------
-*/
+
 for(let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}🏋🏽‍♂️`)
+}
+*/
+const jonasArray = [
+    'Jonas', 
+    'Smith',
+    2037-1991,
+    'teacher',
+    ['Mike', 'Jamal', 'Peter'], 
+    true
+];
+
+const types = [];
+
+for(let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+
+    //filling types array
+    // types[i] = typeof jonasArray[i];
+    types.push(typeof jonasArray[i]);
+}
+
+console.log(types)
+
+const years = [1991, 2007, 1979, 2022];
+const ages = [];
+
+for(let i = 0; i < years.length; i++) {
+    ages.push(2037-years[i]);
+}
+console.log(ages)
+
+//continue and break
+console.log('-----ONLY STRINGS------')
+for(let i = 0; i < jonasArray.length; i++) {
+    if(typeof jonasArray[i] !== 'string') continue; //CONTINUE means skip
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log('-----BREAK WITH NUMBER------')
+for(let i = 0; i < jonasArray.length; i++) {
+    if(typeof jonasArray[i] === 'number') break; //after first number type is found, loop is broken 
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
 }
