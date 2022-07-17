@@ -122,7 +122,6 @@ function checkWinner (dolphinAverage, koalaAverage) {
 
 checkWinner(dolphinAverage, koalaAverage);
 ------------------------------------------------
-*/
 const friend1 = 'Mike';
 const friend2 = 'Jamal';
 const friend3 = 'Peter';
@@ -159,5 +158,32 @@ console.log(age1, age2, age3);
 
 const ages  = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -1])]
 console.log(ages)
+*/
+
+const friends = ['Mike', 'Jamal', 'Peter'];
+
+// Add Elements
+const newLength = friends.push('Hay'); //adds to end of array
+console.log(friends);
+console.log(newLength); //push returns a value of array length
+
+friends.unshift('John'); //adds to start of array
+console.log(friends);
+
+// Subtract Elements
+const popped = friends.pop(); //gets rid of last element
+console.log(friends)
+console.log(popped);
+
+friends.shift(); //removes first element
+console.log(friends)
+
+console.log(friends.indexOf('Jamal')); //returns index of element
+
+console.log(friends.includes('Mike')); //checks if element is in array
+
+if(friends.includes('Jamal')) {
+    console.log(`You have a friend called Jamal`)
+}
 
 
