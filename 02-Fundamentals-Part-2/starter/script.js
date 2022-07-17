@@ -80,7 +80,7 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(2,3));
-*/
+
 const calcAge = function(birthYear) {
     return 2037 - birthYear;
 }
@@ -100,3 +100,24 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Tanzil'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
+*/
+ //Coding Challenge 1
+const calcAverage = (a,b,c) => (a + b + c)/3;
+const dolphinAverage = calcAverage(44,23,71);
+const koalaAverage = calcAverage(85, 54, 41);
+
+function checkWinner (dolphinAverage, koalaAverage) {
+    if(dolphinAverage>koalaAverage && dolphinAverage >= 2 * koalaAverage) {
+        console.log(`Dolphins win (${dolphinAverage} vs. ${koalaAverage})`);
+    } else if(dolphinAverage>koalaAverage && dolphinAverage < 2 * koalaAverage) {
+        console.log(`Dolphins have a greater score (${dolphinAverage} vs. ${koalaAverage}, but do not win!)`);
+    } else if(koalaAverage>dolphinAverage && koalaAverage>= 2 * dolphinAverage) {
+        console.log(`Koalas win (${koalaAverage} vs. ${dolphinAverage})`);
+    } else if(koalaAverage>dolphinAverage && koalaAverage < 2 * dolphinAverage) {
+        console.log(`Koalas have a greater score (${koalaAverage} vs. ${dolphinAverage}, but do not win!)`);
+    } else {
+        console.log(`The average team scores are tied`);
+    }
+}
+
+checkWinner(dolphinAverage, koalaAverage);
