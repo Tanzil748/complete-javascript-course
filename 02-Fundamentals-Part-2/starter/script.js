@@ -100,7 +100,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Tanzil'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
+-------------------------------------------
  //Coding Challenge 1
 const calcAverage = (a,b,c) => (a + b + c)/3;
 const dolphinAverage = calcAverage(44,23,71);
@@ -121,3 +121,43 @@ function checkWinner (dolphinAverage, koalaAverage) {
 }
 
 checkWinner(dolphinAverage, koalaAverage);
+------------------------------------------------
+*/
+const friend1 = 'Mike';
+const friend2 = 'Jamal';
+const friend3 = 'Peter';
+
+const friends = ['Mike', 'Jamal', 'Peter'];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2007, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length-1]);
+
+friends[2] = 'newName';
+console.log(friends);
+
+const firstName = 'Tanzil'
+const array2 = [firstName, 'Hassan', 2022-2000, 'student', friends];
+console.log(array2);
+
+//exercise
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 1993, 2018, 2022];
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length -1]);
+
+console.log(age1, age2, age3);
+
+const ages  = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -1])]
+console.log(ages)
+
+
