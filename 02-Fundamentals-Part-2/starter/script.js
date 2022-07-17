@@ -282,8 +282,8 @@ console.log(jonas.calcAge());
 // }
 
 console.log(jonas.getSummary());
-*/
 
+--------------------------------
 //Coding challenge 4
 const mark = {
     firstName: 'Mark',
@@ -316,4 +316,8 @@ if(mark.bmi > john.bmi) {
 } else {
     console.log(`${john.firstName}'s BMI (${john.bmi} is higher than ${mark.firstName}'s (${mark.bmi}))`)
 }
-
+-----------------------
+*/
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}🏋🏽‍♂️`)
+}
