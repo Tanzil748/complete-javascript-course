@@ -24,6 +24,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textContent = score;
   } else if (guess === secretNumber && score > 0) {
     document.querySelector('.message').textContent = 'Correct number 👍';
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber && score > 0) {
     document.querySelector('.message').textContent = 'Guess is too high';
     score--;
@@ -34,5 +36,6 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textContent = score;
   } else {
     document.querySelector('.message').textContent = 'Game Over! 🥵';
+    document.querySelector('body').style.backgroundColor = '#ff0000';
   }
 });
