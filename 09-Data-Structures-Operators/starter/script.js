@@ -52,32 +52,44 @@ const restaurant = {
   },
 };
 
+/////////////////////////////
+//Nullish Operator (??)
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+//nullish: null or undefined (not 0)
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+////////////////////////
+//Short Circuiting (|| &&)
 // OR (returns first TRUE value)
-console.log('---OR---');
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
-console.log(true || 0);
-console.log(undefined || null);
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// console.log('---OR---');
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
-const guest2 = restaurant.numGuests || 10;
-console.log(guest2);
+// const guest2 = restaurant.numGuests || 10;
+// console.log(guest2);
 
-// AND (returns first FALSE value). if all values true, then returns last true value
-console.log('---AND---');
-console.log(0 && 'Jonas');
-console.log(7 && 'Jonas');
-console.log('Hello' && 23 && null && 'jonas');
+// // AND (returns first FALSE value). if all values true, then returns last true value
+// console.log('---AND---');
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
+// console.log('Hello' && 23 && null && 'jonas');
 
-//practical example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
-}
+// //practical example
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'spinach');
+// }
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+// restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 ////////////////////////////////
 //Rest Pattern & Parameters
