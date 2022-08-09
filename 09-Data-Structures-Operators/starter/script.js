@@ -56,6 +56,39 @@ const restaurant = {
   },
 };
 
+//////////////////////////////////////
+// Sets: collection of unique values (can never have duplicates)
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+
+console.log(new Set('Jomas'));
+console.log(new Set('Tanzil Hassan'));
+console.log(orderSet.size);
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+orderSet.delete('Pizza');
+// orderSet.clear(); //deletes all elements in set
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+//Example
+const staff = ['waiter', 'chef', 'manager', 'chef', 'waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(new Set(['waiter', 'chef', 'manager', 'chef', 'waiter']).size);
+
+console.log(new Set('Tammmansindeinofin').size);
+
 ///////////////////////////////////////
 //Coding Challenge #2
 const game = {
@@ -119,22 +152,22 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 //1
-for (const [i, player] of game.scored.entries()) {
-  console.log(`Goal ${i + 1}: ${player}`);
-}
+// for (const [i, player] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${player}`);
+// }
 
-//2
-const odds = Object.values(game.odds);
-let average = 0;
-for (const odd of odds) average += odd;
-average /= odds.length;
-console.log(average);
+// //2
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) average += odd;
+// average /= odds.length;
+// console.log(average);
 
-//3
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
-  console.log(`Odd of ${teamStr} ${odd}`);
-}
+// //3
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
 ///////////////////////////////////
 //Property NAMES
 // const properties = Object.keys(openingHours);
