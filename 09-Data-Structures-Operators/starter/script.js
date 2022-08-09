@@ -55,6 +55,44 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+///////////////////////////////////////
+//Working with strings - part 1
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -2)); //cuts off zero index and the end two
+
+const checkMiddleSeat = function (seat) {
+  //B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You are in a middle seat');
+  } else {
+    console.log('You have a corner seat!!!');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -86,25 +124,25 @@ const gameEvents = new Map([
 ]);
 
 //1
-const events = [...new Set(gameEvents.values())]; //spread operator makes object into array
-console.log(events);
+// const events = [...new Set(gameEvents.values())]; //spread operator makes object into array
+// console.log(events);
 
-//2
-gameEvents.delete(64);
+// //2
+// gameEvents.delete(64);
 
-//3
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
+// //3
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
 
-//4
-for (const [key, value] of gameEvents) {
-  if (key <= 45) {
-    console.log(`[FIRST HALF] ${key}: ${value}`);
-  } else {
-    console.log(`[SECOND HALF] ${key}: ${value}`);
-  }
-}
+// //4
+// for (const [key, value] of gameEvents) {
+//   if (key <= 45) {
+//     console.log(`[FIRST HALF] ${key}: ${value}`);
+//   } else {
+//     console.log(`[SECOND HALF] ${key}: ${value}`);
+//   }
+// }
 
 ////////////////////
 //Maps - iteration
