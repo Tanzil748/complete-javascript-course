@@ -55,44 +55,104 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-///////////////////////////////////////
-//Working with strings - part 1
+/////////////////////////////
+//Working with strings - part 2
 const airline = 'TAP Air Portugal';
-const plane = 'A320';
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
 
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log('B737'[0]);
-console.log(airline.length);
-console.log('B737'.length);
+//fix capitalization in name
+const passenger = 'taNZIl';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('Portugal'));
+console.log(passengerCorrect);
 
-console.log(airline.slice(4));
-console.log(airline.slice(4, 7));
+// comparing email
+const email = 'tanziltest@gmail.com';
+const loginEmail = '   Tanziltest@Gmail.Com';
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim(); //trim gets rid of white space
+// console.log(trimmedEmail);
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -2)); //cuts off zero index and the end two
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
 
-const checkMiddleSeat = function (seat) {
-  //B and E are middle seats
-  const s = seat.slice(-1);
-  if (s === 'B' || s === 'E') {
-    console.log('You are in a middle seat');
+console.log(email === normalizedEmail);
+
+//replace part of string
+const priceUS = '$315.00';
+const priceGB = priceUS.replace('$', '#');
+
+console.log(priceGB);
+
+const announcement = 'All passengers come to boarding door 1. Boarding door 1';
+// console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+
+//Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new airbus family');
+}
+
+//Practice
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife' || baggage.includes('gun'))) {
+    console.log('You are noy allowed on board');
   } else {
-    console.log('You have a corner seat!!!');
+    console.log('Welcome aboard');
   }
 };
+checkBaggage('I have a laptop, some Food and a Pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
 
-checkMiddleSeat('11B');
-checkMiddleSeat('23C');
-checkMiddleSeat('3E');
+///////////////////////////////////////
+//Working with strings - part 1
+// const airline = 'TAP Air Portugal';
+// const plane = 'A320';
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
+// console.log(airline.length);
+// console.log('B737'.length);
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -2)); //cuts off zero index and the end two
+
+// const checkMiddleSeat = function (seat) {
+//   //B and E are middle seats
+//   const s = seat.slice(-1);
+//   if (s === 'B' || s === 'E') {
+//     console.log('You are in a middle seat');
+//   } else {
+//     console.log('You have a corner seat!!!');
+//   }
+// };
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
 
 ///////////////////////////////////////
 // Coding Challenge #3
