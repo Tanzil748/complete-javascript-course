@@ -21,8 +21,8 @@ const createBooking = function (
 createBooking('LH123');
 createBooking('LH123', 2, 20394);
 createBooking('LH123', undefined, 20394); //undefined lets the default value run if you want to skip a certain parameter
-*/
 
+///////////////////////////////////
 //129. How Passing Arguments Work
 
 const flight = 'LH123';
@@ -53,3 +53,35 @@ const newPassport = function (person) {
 
 newPassport(tanzil);
 checkIn(flight, tanzil);
+*/
+// 131. Functions accepting Callback Functions
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase(); // the two brackets and g selects all the spaces
+};
+
+// console.log(oneWord('jbejbfj  heHHdhbedejb bjwdb'));
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+//Higher-order functions (takes in another function)
+const transformer = function (str, fn) {
+  console.log(`Original String: ${str}`);
+  console.log(`Transformed String: ${fn(str)}`);
+
+  console.log(`Transformed by : ${fn.name}`);
+};
+
+transformer('Javascript is the best!', upperFirstWord);
+transformer('Javascript is the best!', oneWord);
+
+//JS uses callbacks all the time
+const high5 = function () {
+  console.log('👋🏾');
+};
+
+document.body.addEventListener('click', high5);
+
+['Jonas', 'Tanzil', 'Adam'].forEach(high5);
