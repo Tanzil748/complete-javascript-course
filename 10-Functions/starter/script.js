@@ -53,7 +53,7 @@ const newPassport = function (person) {
 
 newPassport(tanzil);
 checkIn(flight, tanzil);
-*/
+
 // 131. Functions accepting Callback Functions
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase(); // the two brackets and g selects all the spaces
@@ -85,3 +85,22 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 
 ['Jonas', 'Tanzil', 'Adam'].forEach(high5);
+*/
+//////////////////////////////////
+// 132. Functions returning functions
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Tanzil');
+
+greet('Hello')('Tanzil'); //same as above
+
+//Arrow Function Equivalent to function returning function
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Friend');
