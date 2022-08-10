@@ -104,8 +104,9 @@ greet('Hello')('Tanzil'); //same as above
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Friend');
-////////////////////////////////////
 */
+////////////////////////////////////
+
 // 133. The call & apply method
 const delta = {
   airline: 'delta',
@@ -157,3 +158,48 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData); //better than using apply
+////////////////////////////
+
+// 134. Bind Method
+const bookEW = book.bind(euroWings);
+const bookSW = book.bind(swiss);
+const bookDA = book.bind(delta);
+
+bookEW(23, 'Steve Williams');
+
+const bookEW23 = book.bind(euroWings, 23);
+bookEW23('Tanzil Hassan');
+bookEW23('Jamal Aka');
+
+// WIth event listeners
+delta.planes = 300;
+delta.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', delta.buyPlane.bind(delta));
+
+//Partial application
+const addtax = (taxRate, value) => value + value * taxRate;
+console.log(addtax(0.1, 200));
+
+const addVAT = addtax.bind(null, 0.23);
+// addVAT = value => value + value * 0.23
+
+console.log(addVAT(100));
+console.log(addVAT(2300));
+
+const addTaxRate = function (taxRate) {
+  return function (value) {
+    return value + value * taxRate;
+  };
+};
+
+const addVAT2 = addTaxRate(0.23);
+
+console.log(addVAT2(100));
+console.log(addVAT2(2300));
