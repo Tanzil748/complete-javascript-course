@@ -263,7 +263,7 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 
 (() => console.log('This will never run again'))();
 --------------------
-*/
+
 
 const secureBooking = function () {
   let passengerCount = 0;
@@ -280,3 +280,48 @@ booker();
 booker();
 booker();
 console.dir(booker);
+*/
+///////////////////////////////////
+// 138. More closure examples
+
+//Example 1
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 7777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+
+// Reassigned f function
+h();
+f();
+console.dir(f);
+/////////////
+//Example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000); //convert wait to (seconds)
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000;
+boardPassengers(180, 3);
+// setTimeout(function () {
+//   //1000 milliseconds = 1 second delay
+//   console.log('TIMER');
+// }, 1000);
