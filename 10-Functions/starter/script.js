@@ -104,7 +104,7 @@ greet('Hello')('Tanzil'); //same as above
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Friend');
-*/
+
 ////////////////////////////////////
 
 // 133. The call & apply method
@@ -246,3 +246,37 @@ document
 poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+---------------------------------------------------
+
+// 136. IIFE
+
+//This way DOES NOT WORK
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
+
+//wrap function in () and add () at the end, will only run ONCE
+(function () {
+  console.log('This will never run again');
+})();
+
+(() => console.log('This will never run again'))();
+--------------------
+*/
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+console.dir(booker);
