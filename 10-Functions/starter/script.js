@@ -280,7 +280,7 @@ booker();
 booker();
 booker();
 console.dir(booker);
-*/
+
 ///////////////////////////////////
 // 138. More closure examples
 
@@ -325,3 +325,15 @@ boardPassengers(180, 3);
 //   //1000 milliseconds = 1 second delay
 //   console.log('TIMER');
 // }, 1000);
+*/
+
+//Coding Challenge 2
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
