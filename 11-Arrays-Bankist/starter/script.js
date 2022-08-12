@@ -74,6 +74,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+/*
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // Slice
@@ -101,3 +102,22 @@ console.log([...arr, ...arr2]);
 
 // JOIN
 console.log(letters.join(' - '));
+*/
+
+//
+//for each method
+for (const [key, value] of movements.entries()) {
+  if (value > 0) {
+    console.log(`Movement ${key + 1}: You deposited ${value}`);
+  } else {
+    console.log(`Movement ${key + 1}: You withdrew ${Math.abs(value)}`);
+  }
+}
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+});
