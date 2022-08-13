@@ -345,7 +345,7 @@ const totalDepositsUSD = movements
 
 console.log(totalDepositsUSD);
 ////////
-*/
+
 
 // Coding Challenge 3
 const calcAverageHumanAge = ages =>
@@ -356,3 +356,13 @@ const calcAverageHumanAge = ages =>
 
 const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 console.log(avg1);
+*/
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
