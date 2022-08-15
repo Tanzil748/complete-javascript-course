@@ -510,7 +510,7 @@ const overallBalance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance2);
-*/
+
 //163. sorting arrays
 //string
 const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
@@ -551,3 +551,14 @@ console.log(movements);
 movements.sort((a, b) => b - a);
 
 console.log(movements);
+*/
+
+//164. more ways of creating and filling arrays
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
+  console.log(movementsUI);
+});
