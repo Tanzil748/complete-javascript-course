@@ -551,7 +551,7 @@ console.log(movements);
 movements.sort((a, b) => b - a);
 
 console.log(movements);
-*/
+
 
 //164. more ways of creating and filling arrays
 
@@ -562,3 +562,52 @@ labelBalance.addEventListener('click', function () {
   );
   console.log(movementsUI);
 });
+*/
+
+//Array Methods Practice
+
+// 1.
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
+
+// 2.
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov >= 1000).length;
+
+const numDeposits1000 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+
+// console.log(accounts.flatMap(acc => acc.movements).filter(mov => mov >= 1000));
+console.log(numDeposits1000);
+
+//3.
+const sums = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+
+console.log(sums);
+
+//4. this is a nice title -> This Is a Nice Title
+const convertTitleCase = function (title) {
+  const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'with', 'in'];
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(' ');
+  return titleCase;
+};
+console.log(convertTitleCase('this is a nice title'));
