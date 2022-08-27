@@ -1,4 +1,5 @@
 'use strict';
+/*
 /////////////////////////////////////
 // Constructor Function
 const Person = function (firstName, birthYear) {
@@ -66,7 +67,7 @@ console.log(arr.unique());
 
 const h1 = document.querySelector('h1');
 console.dir(x => x + 1);
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -82,10 +83,16 @@ DATA CAR 2: 'Mercedes' going at 95 km/h
 GOOD LUCK 😀
 */
 
-function Car(make, speed) {
+/*
+const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
-}
+};
+
+// function Car(make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// }
 
 Car.prototype.accelerate = function () {
   this.speed += 10;
@@ -109,3 +116,31 @@ console.log(tanzilCar.brake());
 console.log(mercedes.brake());
 console.log(mercedes.brake());
 console.log(mercedes.accelerate());
+*/
+
+// Class Expression
+// const PersonCl = class {}
+
+//Class Declaration
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+}
+
+const jessica = new PersonCl('Jessica', 1986);
+console.log(jessica);
+jessica.calcAge();
+
+console.log(jessica.__proto__ === PersonCl.prototype);
+
+PersonCl.prototype.greet = function () {
+  console.log(`Hey ${this.firstName}`);
+};
+
+jessica.greet();
