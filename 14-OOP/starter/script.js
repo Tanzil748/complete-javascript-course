@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 /////////////////////////////////////
 // Constructor Function
 const Person = function (firstName, birthYear) {
@@ -26,6 +26,13 @@ const jay = 'Jay';
 
 console.log(tanzil instanceof Person);
 console.log(jay instanceof Person);
+
+Person.hey = function () {
+  console.log(`Hey there 👋🏾`);
+  console.log(this);
+};
+
+Person.hey();
 
 // Prototypes
 console.log(Person.prototype);
@@ -67,7 +74,7 @@ console.log(arr.unique());
 
 const h1 = document.querySelector('h1');
 console.dir(x => x + 1);
-*/
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -127,6 +134,8 @@ class PersonCl {
     this.fullName = fullName;
     this.birthYear = birthYear;
   }
+
+  // Instance methods
   // Methods will be added to .prototype property
   calcAge() {
     console.log(2037 - this.birthYear);
@@ -148,6 +157,12 @@ class PersonCl {
   get fullName() {
     return this._fullName;
   }
+
+  //   Static Method
+  static hey() {
+    console.log(`Hey there 👋🏾`);
+    console.log(this);
+  }
 }
 
 const jessica = new PersonCl('Jessica Davis', 1986);
@@ -164,7 +179,9 @@ PersonCl.prototype.greet = function () {
 jessica.greet();
 
 const walter = new PersonCl('Walter White', 1965);
+PersonCl.hey();
 
+//Setter/Getter
 const account = {
   owner: 'Jonas',
   movements: [200, 530, 120, 300],
