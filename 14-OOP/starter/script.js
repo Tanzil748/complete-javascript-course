@@ -274,6 +274,7 @@ ford.brake();
 ford.speedUS = 50;
 console.log(ford);
 */
+/*
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
@@ -310,7 +311,7 @@ console.log(jamal instanceof Object);
 
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #3
 
@@ -323,7 +324,7 @@ console.dir(Student.prototype.constructor);
 DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 
 GOOD LUCK 😀
-*/
+
 
 const Car = function (make, speed) {
   this.make = make;
@@ -366,3 +367,57 @@ console.log(tesla);
 
 tesla.brake();
 tesla.accelerate();
+*/
+// Inheritance between classes - ES6
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // Instance methods
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  set fullName(name) {
+    if (name.includes(' ')) {
+      this._fullName = name;
+    } else {
+      alert(`${name} is not a full name`);
+    }
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  //   Static Method
+  static hey() {
+    console.log(`Hey there 👋🏾`);
+    console.log(this);
+  }
+}
+
+class StudentCl extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    // Always needs to happen first
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+}
+
+const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+// const martha = new StudentCl('Martha Jones', 2012);
+martha.introduce();
+
+martha.calcAge();
