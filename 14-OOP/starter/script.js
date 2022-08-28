@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 /////////////////////////////////////
 // Constructor Function
 const Person = function (firstName, birthYear) {
@@ -74,7 +74,7 @@ console.log(arr.unique());
 
 const h1 = document.querySelector('h1');
 console.dir(x => x + 1);
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -127,7 +127,7 @@ console.log(mercedes.accelerate());
 
 // Class Expression
 // const PersonCl = class {}
-
+/*
 //Class Declaration
 class PersonCl {
   constructor(fullName, birthYear) {
@@ -224,7 +224,7 @@ console.log(steven.__proto__ === PersonProto);
 const sarah = Object.create(PersonProto);
 sarah.init('Sarah', 1979);
 sarah.calcAge();
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -237,7 +237,6 @@ sarah.calcAge();
 DATA CAR 1: 'Ford' going at 120 km/h
 
 GOOD LUCK 😀
-*/
 
 class CarCl {
   constructor(make, speed) {
@@ -274,3 +273,40 @@ ford.brake();
 
 ford.speedUS = 50;
 console.log(ford);
+*/
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+const Student = function (firstName, birthYear, course) {
+  Person.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+// linking prototype
+Student.prototype = Object.create(Person.prototype);
+
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const jamal = new Student('Jamal', 2022, 'Computer Science');
+console.log(jamal);
+jamal.introduce();
+jamal.calcAge();
+
+console.log(jamal.__proto__);
+console.log(jamal.__proto__.__proto__);
+console.log(jamal.__proto__.__proto__.__proto__);
+
+console.log(jamal instanceof Student);
+console.log(jamal instanceof Person);
+console.log(jamal instanceof Object);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
